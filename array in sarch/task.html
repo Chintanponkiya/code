@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main div {
+            padding: 10px;
+        }
+
+        .container {
+            margin: 20px 30px;
+        }
+
+        .container input {
+            font-size: 20px;
+            height: 40px;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <input type="search" value="" placeholder="Enter Name">
+            <div class="content">
+                <div class="main"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const persons = [
+            {
+                name: "Chintan",
+                id: 1,
+                designation: "Software Engineer",
+                city: "Junagadh",
+                hobby: "Geming",
+                state: "Gujarat",
+            },
+            {
+                name: "jay",
+                id: 2,
+                designation: "Data Scientist",
+                city: "Rajkot",
+                hobby: "Painting",
+                state: "Gujarat",
+            },
+            {
+                name: "prince",
+                id: 3,
+                designation: "Product Manager",
+                city: "Surat",
+                hobby: "Photography",
+                state: "Gujarat",
+            },
+            {
+                name: "hiren",
+                id: 4,
+                designation: "codar",
+                city: "puna",
+                hobby: "gemmer",
+                state: "Gujarat",
+            },
+            {
+                name: "om",
+                id: 5,
+                designation: "hacker",
+                city: "mumbai",
+                hobby: "tarveling",
+                state: "Gujarat",
+            },
+        ];
+
+        const searchInput = document.querySelector('input[type="search"]');
+        const searchButton = document.querySelector('button');
+        const mainDiv = document.querySelector('.main');
+
+        function display(personsArray) {
+            mainDiv.innerHTML = '';
+
+            personsArray.forEach(person => {
+                const div = document.createElement('div');
+                const textContent = `
+            <ul>
+                <li>Name: ${person.name}</li>
+                <li>ID: ${person.id}</li>
+                <li>Designation: ${person.designation}</li>
+                <li>City: ${person.city}</li>
+                <li>Hobby: ${person.hobby}</li>
+                <li>State: ${person.state}</li>
+            </ul>`;
+                div.innerHTML = textContent;
+                mainDiv.appendChild(div);
+            });
+        }
+
+        display(persons);
+        
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            const searchResults = persons.filter(person => person.name.toLowerCase().includes(searchTerm));
+            
+            if (searchResults.length === 0) {
+                alert('No Data found.');
+                searchInput.value = ""
+                window.location.reload()
+            }
+            display(searchResults);
+        });
+        
+        // searchButton.addEventListener('click', () => {
+        //     const searchTerm = searchInput.value.toLowerCase();
+        //     const searchResults = persons.filter(person => person.name.toLowerCase().includes(searchTerm));
+
+
+        //     // if (searchResults.length === 0) {
+        //     //     alert('No results found.');
+        //     //     searchInput.value = ""
+        //     //     window.location.reload()
+        //     // }
+
+        //     display(searchResults);
+        // });
+        
+    </script>
+
+</body>
+
+</html>

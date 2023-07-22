@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="01.css">
+
+</head>
+<body>
+    <div class="contaners">
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Designation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span>Chintan</span>
+                        <button class="edit-button" onclick="editElement(this)"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="delete-button"onclick="deleteCell(this.parentNode)"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                    <td>
+                        <span>Junagadh</span>
+                        <button class="edit-button" onclick="editElement(this)"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="delete-button" onclick="deleteCell(this.parentNode)"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                    <td>
+                        <span>Software Engineer</span>
+                        <button class="edit-button" onclick="editElement(this)"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="delete-button"onclick="deleteCell(this.parentNode)"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Om</span>
+                        <button class="edit-button" onclick="editElement(this)"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="delete-button"onclick="deleteCell(this.parentNode)"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                    <td>
+                        <span>Rajkot</span>
+                        <button class="edit-button" onclick="editElement(this)"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="delete-button"onclick="deleteCell(this.parentNode)"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                    <td>
+                        <span>Data Scientist</span>
+                        <button class="edit-button" onclick="editElement(this)"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="delete-button"onclick="deleteCell(this.parentNode)"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>prince</span>
+                        <button class="edit-button" onclick="editElement(this)"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="delete-button"onclick="deleteCell(this.parentNode)"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                    <td>
+                        <span>Surat</span>
+                        <button class="edit-button" onclick="editElement(this)"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="delete-button"onclick="deleteCell(this.parentNode)"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                    <td>
+                        <span>Product Manager</span>
+                        <button class="edit-button" onclick="editElement(this)"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button class="delete-button"onclick="deleteCell(this.parentNode)"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="01.js"></script>
+</body>
+</html>
